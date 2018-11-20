@@ -21,4 +21,8 @@
     <string name="id_induk">ID Induk</string>
     <string name="no_hp">NO HP</string>
 
+    <!--String for Home-->
+    <string name="list_pengaduan">List Pengaduan</string>
+    <string name="grafik_record">Grafik Record</string>
+
 </resources>
