@@ -24,5 +24,6 @@
     <!--String for Home-->
     <string name="list_pengaduan">List Pengaduan</string>
     <string name="grafik_record">Grafik Record</string>
+    <string name="logo_pdam">logo pdam</string>
 
 </resources>

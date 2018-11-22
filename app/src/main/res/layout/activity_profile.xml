@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!--<data>-->
-        <!--<variable-->
-            <!--name="user"-->
-            <!--type="com.example.esurat.model.User" />-->
-    <!--</data>-->
+    <data>
+        <variable
+            name="user"
+            type="com.pdamkotamadiun.aduin.model.user.Datum" />
+    </data>
 
     <ScrollView
         android:layout_width="fill_parent"
@@ -39,7 +39,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="text"
                     android:hint="@string/nama"
-                    android:text="@{user.nama}"/>
+                    android:text="@{user.name}"/>
             </android.support.design.widget.TextInputLayout>
 
             <!-- Jabatan Label-->
@@ -54,38 +54,38 @@
                     android:layout_height="wrap_content"
                     android:inputType="text"
                     android:hint="@string/jabatan"
-                    android:text="@{user.jabatan}"/>
+                    android:text="@{user.position}"/>
             </android.support.design.widget.TextInputLayout>
 
-            <!-- ID Induk-->
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp">
-                <EditText android:id="@+id/activity_profile_id_induk"
-                    android:textColor="@color/white"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="text"
-                    android:hint="@string/id_induk"
-                    android:text="@{user.idInduk}"/>
-            </android.support.design.widget.TextInputLayout>
+            <!--&lt;!&ndash; ID Induk&ndash;&gt;-->
+            <!--<android.support.design.widget.TextInputLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="8dp"-->
+                <!--android:layout_marginBottom="8dp">-->
+                <!--<EditText android:id="@+id/activity_profile_id_induk"-->
+                    <!--android:textColor="@color/white"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:inputType="text"-->
+                    <!--android:hint="@string/id_induk"-->
+                    <!--android:text="@{user.idInduk}"/>-->
+            <!--</android.support.design.widget.TextInputLayout>-->
 
-            <!-- HP -->
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp">
-                <EditText android:id="@+id/activity_profile_hp"
-                    android:textColor="@color/white"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="text"
-                    android:hint="@string/no_hp"
-                    android:text="@{user.hp}"/>
-            </android.support.design.widget.TextInputLayout>
+            <!--&lt;!&ndash; HP &ndash;&gt;-->
+            <!--<android.support.design.widget.TextInputLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="8dp"-->
+                <!--android:layout_marginBottom="8dp">-->
+                <!--<EditText android:id="@+id/activity_profile_hp"-->
+                    <!--android:textColor="@color/white"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:inputType="text"-->
+                    <!--android:hint="@string/no_hp"-->
+                    <!--android:text="@{user.hp}"/>-->
+            <!--</android.support.design.widget.TextInputLayout>-->
 
             <android.support.v7.widget.AppCompatButton
                 android:id="@+id/activity_profile_keluar"

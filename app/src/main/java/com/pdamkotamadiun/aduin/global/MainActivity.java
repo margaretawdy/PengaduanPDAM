@@ -1,4 +1,4 @@
-package com.pdamkotamadiun.aduin.Global;
+package com.pdamkotamadiun.aduin.global;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
