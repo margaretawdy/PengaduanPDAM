@@ -21,7 +21,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".global.ProfileActivity" />
-        <activity android:name=".supervisor.HomeActivity"></activity>
+        <activity android:name=".supervisor.HomeActivity" />
+        <activity android:name=".DetailPengaduan"></activity>
     </application>
 
 </manifest>

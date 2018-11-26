@@ -26,4 +26,15 @@
     <string name="grafik_record">Grafik Record</string>
     <string name="logo_pdam">logo pdam</string>
 
+    <!--String for Detail Pengaduan-->
+    <string name="perihal">Perihal</string>
+    <string name="no_pengaduan">Nomor Pengaduan</string>
+    <string name="nama_pelanggan">Nama Pelanggan</string>
+    <string name="alamat">Alamat</string>
+    <string name="keluhan">Keluhan</string>
+    <string name="keterangan">Keterangan</string>
+    <string name="tanggal_pengaduan">Tanggal Pengaduan</string>
+    <string name="sifat">Sifat</string>
+    <string name="status">Status</string>
+
 </resources>
