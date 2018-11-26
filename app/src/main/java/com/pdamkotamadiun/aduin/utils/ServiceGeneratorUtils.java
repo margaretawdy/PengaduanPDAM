@@ -8,7 +8,8 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ServiceGeneratorUtils {
-    private static final String API_URL = Constant.BASE_URL + "api/";
+    private static final String API_URL = Constant.BASE_URL;
+
     public ServiceGeneratorUtils() {
     }
 
