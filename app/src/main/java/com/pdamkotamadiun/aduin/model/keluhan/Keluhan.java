@@ -1,5 +1,4 @@
-
-package com.pdamkotamadiun.aduin.model.token;
+package com.pdamkotamadiun.aduin.model.keluhan;
 
 import android.support.annotation.NonNull;
 
@@ -10,7 +9,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
-public class Token implements Serializable
+public class Keluhan implements Serializable
 {
 
     @SerializedName("error")
@@ -22,7 +21,7 @@ public class Token implements Serializable
     @SerializedName("data")
     @Expose
     private Data data;
-    private final static long serialVersionUID = 4458132047534755329L;
+    private final static long serialVersionUID = 2798159230708521111L;
 
     public boolean isError() {
         return error;
@@ -64,10 +63,10 @@ public class Token implements Serializable
         if (other == this) {
             return true;
         }
-        if (!(other instanceof Token)) {
+        if (!(other instanceof Keluhan)) {
             return false;
         }
-        Token rhs = ((Token) other);
+        Keluhan rhs = ((Keluhan) other);
         return new EqualsBuilder().append(message, rhs.message).append(error, rhs.error).append(data, rhs.data).isEquals();
     }
 

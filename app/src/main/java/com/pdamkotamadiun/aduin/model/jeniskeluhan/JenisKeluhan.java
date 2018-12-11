@@ -1,16 +1,16 @@
-
-package com.pdamkotamadiun.aduin.model.token;
+package com.pdamkotamadiun.aduin.model.jeniskeluhan;
 
 import android.support.annotation.NonNull;
 
 import java.io.Serializable;
+import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
-public class Token implements Serializable
+public class JenisKeluhan implements Serializable
 {
 
     @SerializedName("error")
@@ -21,8 +21,8 @@ public class Token implements Serializable
     private String message;
     @SerializedName("data")
     @Expose
-    private Data data;
-    private final static long serialVersionUID = 4458132047534755329L;
+    private List<Datum> data = null;
+    private final static long serialVersionUID = 1241283787822351056L;
 
     public boolean isError() {
         return error;
@@ -40,11 +40,11 @@ public class Token implements Serializable
         this.message = message;
     }
 
-    public Data getData() {
+    public List<Datum> getData() {
         return data;
     }
 
-    public void setData(Data data) {
+    public void setData(List<Datum> data) {
         this.data = data;
     }
 
@@ -64,10 +64,10 @@ public class Token implements Serializable
         if (other == this) {
             return true;
         }
-        if (!(other instanceof Token)) {
+        if (!(other instanceof JenisKeluhan)) {
             return false;
         }
-        Token rhs = ((Token) other);
+        JenisKeluhan rhs = ((JenisKeluhan) other);
         return new EqualsBuilder().append(message, rhs.message).append(error, rhs.error).append(data, rhs.data).isEquals();
     }
 

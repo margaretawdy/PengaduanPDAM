@@ -9,6 +9,6 @@ import retrofit2.http.POST;
 
 public interface LoginService {
     @FormUrlEncoded
-    @POST("token")
+    @POST("login")
     Call<Token> getToken(@Field("username") String username, @Field("password") String password);
 }

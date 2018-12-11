@@ -4,5 +4,5 @@ public class Constant {
     public Constant() {
     }
 
-    public static final String BASE_URL = "http://36.91.95.243:8084/esurat/api//";
+    public static final String BASE_URL = "http://149.28.165.251:8080/api/";
 }

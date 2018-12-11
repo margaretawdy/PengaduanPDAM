@@ -9,13 +9,13 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
-public class Datum implements Serializable
+public class Data implements Serializable
 {
 
     @SerializedName("token")
     @Expose
     private String token;
-    private final static long serialVersionUID = -3090052040686481739L;
+    private final static long serialVersionUID = -6245783445276534287L;
 
     public String getToken() {
         return token;
@@ -41,10 +41,10 @@ public class Datum implements Serializable
         if (other == this) {
             return true;
         }
-        if (!(other instanceof Datum)) {
+        if (!(other instanceof Data)) {
             return false;
         }
-        Datum rhs = ((Datum) other);
+        Data rhs = ((Data) other);
         return new EqualsBuilder().append(token, rhs.token).isEquals();
     }
 

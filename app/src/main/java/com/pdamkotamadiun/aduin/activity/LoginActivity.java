@@ -1,4 +1,4 @@
-package com.pdamkotamadiun.aduin.global;
+package com.pdamkotamadiun.aduin.activity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -15,7 +15,7 @@ import android.widget.LinearLayout;
 import com.pdamkotamadiun.aduin.R;
 import com.pdamkotamadiun.aduin.model.token.Token;
 import com.pdamkotamadiun.aduin.service.LoginService;
-import com.pdamkotamadiun.aduin.supervisor.HomeActivity;
+import com.pdamkotamadiun.aduin.activity.supervisor.HomeActivity;
 import com.pdamkotamadiun.aduin.utils.ServiceGeneratorUtils;
 
 import butterknife.BindView;

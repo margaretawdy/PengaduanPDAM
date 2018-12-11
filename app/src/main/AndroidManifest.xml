@@ -15,16 +15,16 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning"
         tools:targetApi="n">
-        <activity android:name=".global.LoginActivity" android:theme="@style/AppTheme.Dark">
+        <activity android:name=".activity.LoginActivity" android:theme="@style/AppTheme.Dark">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".global.ProfileActivity" />
-        <activity android:name=".supervisor.HomeActivity" />
-        <activity android:name=".DetailPengaduan"></activity>
+        <activity android:name=".activity.AccountActivity" />
+        <activity android:name=".activity.supervisor.HomeActivity" />
+        <activity android:name=".DetailPengaduan" />
     </application>
 
 </manifest>
