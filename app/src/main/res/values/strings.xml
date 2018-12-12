@@ -42,7 +42,6 @@
     <string name="button_cek">Cek</string>
     <string name="input_keterangan">Masukkan Keterangan</string>
     <string name="button_hapus">Hapus</string>
-    <string name="button_hapus">Hapus</string>
     <string name="button_proses">Proses</string>
 
 </resources>

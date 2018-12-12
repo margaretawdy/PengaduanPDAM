@@ -28,7 +28,8 @@
         <activity android:name=".activity.supervisor.HomeActivity" />
         <activity android:name=".DetailPengaduan" />
         <activity android:name=".ListPengaduan" />
-        <activity android:name=".InputPengaduan"></activity>
+        <activity android:name=".InputPengaduan" />
+        <activity android:name=".GraphOverview"></activity>
     </application>
 
 </manifest>
