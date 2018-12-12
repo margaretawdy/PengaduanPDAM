@@ -35,10 +35,10 @@ public class LoginActivity extends AppCompatActivity {
     @BindView(R.id.activity_login_linearLayout)
     LinearLayout linearLayout;
 
-    @BindView(R.id.activity_login_edittext_username)
+    @BindView(R.id.activity_login_editText_username)
     EditText etUsername;
 
-    @BindView(R.id.activity_login_edittext_password)
+    @BindView(R.id.activity_login_editText_password)
     EditText etPassword;
 
     @BindView(R.id.activity_login_button_login)
