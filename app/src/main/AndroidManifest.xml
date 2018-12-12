@@ -27,7 +27,8 @@
         <activity android:name=".activity.AccountActivity" />
         <activity android:name=".activity.supervisor.HomeActivity" />
         <activity android:name=".DetailPengaduan" />
-        <activity android:name=".ListPengaduan"></activity>
+        <activity android:name=".ListPengaduan" />
+        <activity android:name=".InputPengaduan"></activity>
     </application>
 
 </manifest>
