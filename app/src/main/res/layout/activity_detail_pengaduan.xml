@@ -3,15 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-
     <android.support.constraint.ConstraintLayout
-        android:id="@+id/activity_main_detail_constaintLayout"
+        android:id="@+id/activity_detail_pengaduan_constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true">
 
         <ScrollView
-            android:id="@+id/activity_main_detail_scrollView"
+            android:id="@+id/activity_detail_pengaduan_scrollView"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -24,7 +23,7 @@
 
                 <!--TextView Judul-->
                 <LinearLayout
-                    android:id="@+id/activity_main_detail_linearLayout_judul"
+                    android:id="@+id/activity_detail_pengaduan_linearLayout_judul"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -36,7 +35,7 @@
                     app:layout_constraintTop_toTopOf="parent">
 
                     <TextView
-                        android:id="@+id/activity_main_detail_textView_judul"
+                        android:id="@+id/activity_detail_pengaduan_textView_judul"
                         android:layout_width="110dp"
                         android:layout_height="wrap_content"
                         android:gravity="center_vertical"
@@ -45,7 +44,7 @@
                         tools:text="Judul" />
 
                     <TextView
-                        android:id="@+id/activity_main_detail_textView_value_judul"
+                        android:id="@+id/activity_detail_pengaduan_textView_value_judul"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
@@ -56,19 +55,19 @@
 
                 <!--TextView Nomor Pengaduan-->
                 <LinearLayout
-                    android:id="@+id/activity_main_detail_linearLayout_noPengaduan"
+                    android:id="@+id/activity_detail_pengaduan_linearLayout_noPengaduan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
                     android:orientation="horizontal"
-                    app:layout_constraintEnd_toEndOf="@+id/activity_main_detail_linearLayout_judul"
-                    app:layout_constraintStart_toStartOf="@+id/activity_main_detail_linearLayout_judul"
-                    app:layout_constraintTop_toBottomOf="@+id/activity_main_detail_linearLayout_judul">
+                    app:layout_constraintEnd_toEndOf="@+id/activity_detail_pengaduan_linearLayout_judul"
+                    app:layout_constraintStart_toStartOf="@+id/activity_detail_pengaduan_linearLayout_judul"
+                    app:layout_constraintTop_toBottomOf="@+id/activity_detail_pengaduan_linearLayout_judul">
 
                     <TextView
-                        android:id="@+id/activity_main_detail_textView_noPengaduan"
+                        android:id="@+id/activity_detail_pengaduan_textView_noPengaduan"
                         android:layout_width="110dp"
                         android:layout_height="wrap_content"
                         android:gravity="center_vertical"
@@ -77,7 +76,7 @@
                         tools:text="Nomor Pengaduan" />
 
                     <TextView
-                        android:id="@+id/activity_main_detail_textView_value_noPengaduan"
+                        android:id="@+id/activity_detail_pengaduan_textView_value_noPengaduan"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
@@ -88,19 +87,19 @@
 
                 <!--TextView Nama Pelanggan-->
                 <LinearLayout
-                    android:id="@+id/activity_main_detail_linearLayout_namaPelanggan"
+                    android:id="@+id/activity_detail_pengaduan_linearLayout_namaPelanggan"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:orientation="horizontal"
-                    app:layout_constraintEnd_toEndOf="@+id/activity_main_detail_linearLayout_noPengaduan"
-                    app:layout_constraintStart_toStartOf="@+id/activity_main_detail_linearLayout_noPengaduan"
-                    app:layout_constraintTop_toBottomOf="@+id/activity_main_detail_linearLayout_noPengaduan">
+                    app:layout_constraintEnd_toEndOf="@+id/activity_detail_pengaduan_linearLayout_noPengaduan"
+                    app:layout_constraintStart_toStartOf="@+id/activity_detail_pengaduan_linearLayout_noPengaduan"
+                    app:layout_constraintTop_toBottomOf="@+id/activity_detail_pengaduan_linearLayout_noPengaduan">
 
                     <TextView
-                        android:id="@+id/activity_main_detail_textView_namaPelanggan"
+                        android:id="@+id/activity_detail_pengaduan_textView_namaPelanggan"
                         android:layout_width="110dp"
                         android:layout_height="wrap_content"
                         android:gravity="center_vertical"
@@ -109,7 +108,7 @@
                         tools:text="Nama Pelanggan" />
 
                     <TextView
-                        android:id="@+id/activity_main_detail_textView_value_namaPelanggan"
+                        android:id="@+id/activity_detail_pengaduan_textView_value_namaPelanggan"
                         android:layout_marginStart="16dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -120,26 +119,26 @@
 
                 <!--TextView Alamat-->
                 <LinearLayout
-                    android:id="@+id/activity_main_detail_linearLayout_alamat"
+                    android:id="@+id/activity_detail_pengaduan_linearLayout_alamat"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="16dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:orientation="horizontal"
-                    app:layout_constraintEnd_toEndOf="@+id/activity_main_detail_linearLayout_namaPelanggan"
-                    app:layout_constraintStart_toStartOf="@+id/activity_main_detail_linearLayout_namaPelanggan"
-                    app:layout_constraintTop_toBottomOf="@+id/activity_main_detail_linearLayout_namaPelanggan">
+                    app:layout_constraintEnd_toEndOf="@+id/activity_detail_pengaduan_linearLayout_namaPelanggan"
+                    app:layout_constraintStart_toStartOf="@+id/activity_detail_pengaduan_linearLayout_namaPelanggan"
+                    app:layout_constraintTop_toBottomOf="@+id/activity_detail_pengaduan_linearLayout_namaPelanggan">
 
                     <TextView
-                        android:id="@+id/activity_main_detail_textView_alamat"
+                        android:id="@+id/activity_detail_pengaduan_textView_alamat"
                         android:layout_width="110dp"
                         android:layout_height="wrap_content"
                         android:text="@string/alamat"
                         tools:text="Alamat" />
 
                     <TextView
-                        android:id="@+id/activity_main_detail_textView_value_alamat"
+                        android:id="@+id/activity_detail_pengaduan_textView_value_alamat"
                         android:layout_marginStart="16dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -148,26 +147,26 @@
 
                 <!--Textview Keluhan-->
                 <LinearLayout
-                    android:id="@+id/activity_main_detail_linearLayout_keluhan"
+                    android:id="@+id/activity_detail_pengaduan_linearLayout_keluhan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="16dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:orientation="horizontal"
-                    app:layout_constraintEnd_toEndOf="@+id/activity_main_detail_linearLayout_alamat"
-                    app:layout_constraintStart_toStartOf="@+id/activity_main_detail_linearLayout_alamat"
-                    app:layout_constraintTop_toBottomOf="@+id/activity_main_detail_linearLayout_alamat">
+                    app:layout_constraintEnd_toEndOf="@+id/activity_detail_pengaduan_linearLayout_alamat"
+                    app:layout_constraintStart_toStartOf="@+id/activity_detail_pengaduan_linearLayout_alamat"
+                    app:layout_constraintTop_toBottomOf="@+id/activity_detail_pengaduan_linearLayout_alamat">
 
                     <TextView
-                        android:id="@+id/activity_main_detail_textView_keluhan"
+                        android:id="@+id/activity_detail_pengaduan_textView_keluhan"
                         android:layout_width="110dp"
                         android:layout_height="wrap_content"
                         android:text="@string/keluhan"
                         tools:text="Keluhan" />
 
                     <TextView
-                        android:id="@+id/activity_main_detail_textView_value_keluhan"
+                        android:id="@+id/activity_detail_pengaduan_textView_value_keluhan"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
@@ -176,26 +175,26 @@
 
                 <!--Textview Keterangan-->
                 <LinearLayout
-                    android:id="@+id/activity_main_detail_linearLayout_keterangan"
+                    android:id="@+id/activity_detail_pengaduan_linearLayout_keterangan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="16dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:orientation="horizontal"
-                    app:layout_constraintEnd_toEndOf="@+id/activity_main_detail_linearLayout_keluhan"
-                    app:layout_constraintStart_toStartOf="@+id/activity_main_detail_linearLayout_keluhan"
-                    app:layout_constraintTop_toBottomOf="@+id/activity_main_detail_linearLayout_keluhan">
+                    app:layout_constraintEnd_toEndOf="@+id/activity_detail_pengaduan_linearLayout_keluhan"
+                    app:layout_constraintStart_toStartOf="@+id/activity_detail_pengaduan_linearLayout_keluhan"
+                    app:layout_constraintTop_toBottomOf="@+id/activity_detail_pengaduan_linearLayout_keluhan">
 
                     <TextView
-                        android:id="@+id/activity_main_detail_textView_keterangan"
+                        android:id="@+id/activity_detail_pengaduan_textView_keterangan"
                         android:layout_width="110dp"
                         android:layout_height="wrap_content"
                         android:text="@string/keterangan"
                         tools:text="Keterangan" />
 
                     <TextView
-                        android:id="@+id/activity_main_detail_textView_value_keterangan"
+                        android:id="@+id/activity_detail_pengaduan_textView_value_keterangan"
                         android:layout_marginStart="16dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -204,26 +203,26 @@
 
                 <!--TextView Tanggal Pengaduan-->
                 <LinearLayout
-                    android:id="@+id/activity_main_detail_linearLayout_tanggalPengaduan"
+                    android:id="@+id/activity_detail_pengaduan_linearLayout_tanggalPengaduan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
                     android:orientation="horizontal"
-                    app:layout_constraintEnd_toEndOf="@+id/activity_main_detail_linearLayout_keterangan"
-                    app:layout_constraintStart_toStartOf="@+id/activity_main_detail_linearLayout_keterangan"
-                    app:layout_constraintTop_toBottomOf="@+id/activity_main_detail_linearLayout_keterangan">
+                    app:layout_constraintEnd_toEndOf="@+id/activity_detail_pengaduan_linearLayout_keterangan"
+                    app:layout_constraintStart_toStartOf="@+id/activity_detail_pengaduan_linearLayout_keterangan"
+                    app:layout_constraintTop_toBottomOf="@+id/activity_detail_pengaduan_linearLayout_keterangan">
 
                     <TextView
-                        android:id="@+id/activity_main_detail_textView_tanggalPengaduan"
+                        android:id="@+id/activity_detail_pengaduan_textView_tanggalPengaduan"
                         android:layout_width="110dp"
                         android:layout_height="wrap_content"
                         android:text="@string/tanggal_pengaduan"
                         tools:text="Tanggal Pengaduan" />
 
                     <TextView
-                        android:id="@+id/activity_main_detail_textView_value_tanggalPengaduan"
+                        android:id="@+id/activity_detail_pengaduan_textView_value_tanggalPengaduan"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
@@ -232,26 +231,26 @@
 
                 <!--TextView Status-->
                 <LinearLayout
-                    android:id="@+id/activity_main_detail_linearLayout_status"
+                    android:id="@+id/activity_detail_pengaduan_linearLayout_status"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
                     android:orientation="horizontal"
-                    app:layout_constraintEnd_toEndOf="@+id/activity_main_detail_linearLayout_tanggalPengaduan"
-                    app:layout_constraintStart_toStartOf="@+id/activity_main_detail_linearLayout_tanggalPengaduan"
-                    app:layout_constraintTop_toBottomOf="@+id/activity_main_detail_linearLayout_tanggalPengaduan">
+                    app:layout_constraintEnd_toEndOf="@+id/activity_detail_pengaduan_linearLayout_tanggalPengaduan"
+                    app:layout_constraintStart_toStartOf="@+id/activity_detail_pengaduan_linearLayout_tanggalPengaduan"
+                    app:layout_constraintTop_toBottomOf="@+id/activity_detail_pengaduan_linearLayout_tanggalPengaduan">
 
                     <TextView
-                        android:id="@+id/activity_main_detail_textView_status"
+                        android:id="@+id/activity_detail_pengaduan_textView_status"
                         android:layout_width="110dp"
                         android:layout_height="wrap_content"
                         android:text="@string/status"
                         tools:text="Status" />
 
                     <TextView
-                        android:id="@+id/activity_main_detail_textView_value_status"
+                        android:id="@+id/activity_detail_pengaduan_textView_value_status"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
@@ -260,7 +259,7 @@
 
                 <!--Textview Sifat-->
                 <LinearLayout
-                    android:id="@+id/activity_main_detail_linearLayout_sifat"
+                    android:id="@+id/activity_detail_pengaduan_linearLayout_sifat"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -269,19 +268,19 @@
                     android:layout_marginBottom="8dp"
                     android:orientation="horizontal"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/activity_main_detail_linearLayout_status"
-                    app:layout_constraintStart_toStartOf="@+id/activity_main_detail_linearLayout_status"
-                    app:layout_constraintTop_toBottomOf="@+id/activity_main_detail_linearLayout_status">
+                    app:layout_constraintEnd_toEndOf="@+id/activity_detail_pengaduan_linearLayout_status"
+                    app:layout_constraintStart_toStartOf="@+id/activity_detail_pengaduan_linearLayout_status"
+                    app:layout_constraintTop_toBottomOf="@+id/activity_detail_pengaduan_linearLayout_status">
 
                     <TextView
-                        android:id="@+id/activity_main_detail_textView_sifat"
+                        android:id="@+id/activity_detail_pengaduan_textView_sifat"
                         android:layout_width="110dp"
                         android:layout_height="wrap_content"
                         android:text="@string/sifat"
                         tools:text="Sifat" />
 
                     <TextView
-                        android:id="@+id/activity_main_detail_textView_value_sifat"
+                        android:id="@+id/activity_detail_pengaduan_textView_value_sifat"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"

@@ -3,23 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-        <variable
-            name="surat"
-            type="com.example.esurat.model.Surat"/>
-    </data>
-
     <android.support.constraint.ConstraintLayout
-        android:id="@+id/activity_main_detail_constaintLayout"
+        android:id="@+id/activity_input_pengaduan_constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true">
 
         <ScrollView
-            android:id="@+id/activity_main_detail_scrollView"
+            android:id="@+id/activity_input_pengaduan_scrollView"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toTopOf="@+id/activity_main_detail_button_lihatSurat"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -30,7 +23,7 @@
                 android:minHeight="250dp">
 
                 <LinearLayout
-                    android:id="@+id/activity_input_pengaduan_linearLayout_nomor_sambung"
+                    android:id="@+id/activity_input_pengaduan_linearLayout_nomorSambung"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -48,7 +41,7 @@
                         android:layout_marginBottom="8dp">
 
                         <EditText
-                            android:id="@+id/activity_input_pengaduan_input_nomor_sambung"
+                            android:id="@+id/activity_input_pengaduan_editText_input_nomorSambung"
                             android:layout_width="248dp"
                             android:layout_height="wrap_content"
                             android:hint="@string/input_nomor_sambung"
@@ -71,13 +64,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:paddingLeft="4dp"
-                    app:layout_constraintEnd_toEndOf="@+id/activity_input_pengaduan_linearLayout_nomor_sambung"
-                    app:layout_constraintStart_toStartOf="@+id/activity_input_pengaduan_linearLayout_nomor_sambung"
-                    app:layout_constraintTop_toBottomOf="@+id/activity_input_pengaduan_linearLayout_nomor_sambung"
+                    app:layout_constraintEnd_toEndOf="@+id/activity_input_pengaduan_linearLayout_nomorSambung"
+                    app:layout_constraintStart_toStartOf="@+id/activity_input_pengaduan_linearLayout_nomorSambung"
+                    app:layout_constraintTop_toBottomOf="@+id/activity_input_pengaduan_linearLayout_nomorSambung"
                     tools:text="Dummy Nama Pelanggan" />
 
                 <Spinner
-                    android:id="@+id/activity_input_pengaduan_spinner_value_jenis_keluhan"
+                    android:id="@+id/activity_input_pengaduan_spinner_value_jenisKeluhan"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
@@ -92,9 +85,9 @@
                     android:layout_height="62dp"
                     android:layout_marginTop="8dp"
                     android:orientation="horizontal"
-                    app:layout_constraintEnd_toEndOf="@+id/activity_input_pengaduan_spinner_value_jenis_keluhan"
-                    app:layout_constraintStart_toStartOf="@+id/activity_input_pengaduan_spinner_value_jenis_keluhan"
-                    app:layout_constraintTop_toBottomOf="@+id/activity_input_pengaduan_spinner_value_jenis_keluhan">
+                    app:layout_constraintEnd_toEndOf="@+id/activity_input_pengaduan_spinner_value_jenisKeluhan"
+                    app:layout_constraintStart_toStartOf="@+id/activity_input_pengaduan_spinner_value_jenisKeluhan"
+                    app:layout_constraintTop_toBottomOf="@+id/activity_input_pengaduan_spinner_value_jenisKeluhan">
 
                     <android.support.design.widget.TextInputLayout
                         android:layout_width="match_parent"
@@ -103,7 +96,7 @@
                         android:layout_marginBottom="8dp">
 
                         <EditText
-                            android:id="@+id/activity_input_pengaduan_input_keterangan"
+                            android:id="@+id/activity_input_pengaduan_editText_input_keterangan"
                             android:layout_width="333dp"
                             android:layout_height="wrap_content"
                             android:hint="@string/input_keterangan"
@@ -113,22 +106,12 @@
 
                 </LinearLayout>
 
-                <Spinner
-                    android:id="@+id/activity_input_pengaduan_spinner_value_kategori_distribusi"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="16dp"
-                    app:layout_constraintEnd_toEndOf="@+id/activity_input_pengaduan_linearLayout_keterangan"
-                    app:layout_constraintStart_toStartOf="@+id/activity_input_pengaduan_linearLayout_keterangan"
-                    app:layout_constraintTop_toBottomOf="@+id/activity_input_pengaduan_linearLayout_keterangan" />
-
             </android.support.constraint.ConstraintLayout>
 
         </ScrollView>
 
         <Button
-            android:id="@+id/activity_main_detail_button_lihatSurat"
+            android:id="@+id/activity_input_pengaduan_button_hapus"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="@color/primary"
@@ -138,11 +121,11 @@
             android:textColor="@color/white"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/activity_main_detail_button_statusSelesai"
+            app:layout_constraintEnd_toStartOf="@+id/activity_input_pengaduan_button_proses"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
-            android:id="@+id/activity_main_detail_button_statusSelesai"
+            android:id="@+id/activity_input_pengaduan_button_proses"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="2dp"
@@ -152,10 +135,10 @@
             android:text="@string/button_proses"
             android:textColor="@color/white"
             android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="@+id/activity_main_detail_button_lihatSurat"
+            app:layout_constraintBottom_toBottomOf="@+id/activity_input_pengaduan_button_hapus"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/activity_main_detail_button_lihatSurat"
-            app:layout_constraintTop_toTopOf="@+id/activity_main_detail_button_lihatSurat" />
+            app:layout_constraintStart_toEndOf="@+id/activity_input_pengaduan_button_hapus"
+            app:layout_constraintTop_toTopOf="@+id/activity_input_pengaduan_button_hapus" />
 
     </android.support.constraint.ConstraintLayout>
 

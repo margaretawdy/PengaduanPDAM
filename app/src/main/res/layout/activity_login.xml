@@ -22,6 +22,7 @@
             android:contentDescription="@string/logo" />
 
         <TextView
+            android:id="@+id/activity_login_textView_monitoringPengaduan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -32,6 +33,7 @@
             tools:text="@string/app_name" />
 
         <TextView
+            android:id="@+id/activity_login_textView_kotaMadiun"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -48,7 +50,7 @@
             android:layout_marginBottom="8dp">
 
             <EditText
-                android:id="@+id/activity_login_edittext_username"
+                android:id="@+id/activity_login_editText_username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/username"
@@ -64,7 +66,7 @@
             android:layout_marginBottom="8dp">
 
             <EditText
-                android:id="@+id/activity_login_edittext_password"
+                android:id="@+id/activity_login_editText_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/password"

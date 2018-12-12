@@ -44,4 +44,8 @@
     <string name="button_hapus">Hapus</string>
     <string name="button_proses">Proses</string>
 
+    <!--String for Graph Overview-->
+    <string name="button_overview">Overview</string>
+    <string name="button_detail">Detail</string>
+
 </resources>

@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <data>
-        <variable
-            name="user"
-            type="com.pdamkotamadiun.aduin.model.user.Datum" />
-    </data>
-
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -27,34 +21,34 @@
                 android:layout_gravity="center_horizontal"
                 android:contentDescription="@string/profile" />
 
-            <!-- Nama Label-->
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp">
+
                 <EditText android:id="@+id/activity_profile_nama"
                     android:textColor="@color/white"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text"
-                    android:hint="@string/nama"
-                    android:text="@{user.name}"/>
+                    android:hint="@string/nama"/>
+
             </android.support.design.widget.TextInputLayout>
 
-            <!-- Jabatan Label-->
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp">
+
                 <EditText android:id="@+id/activity_profile_jabatan"
                     android:textColor="@color/white"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text"
-                    android:hint="@string/jabatan"
-                    android:text="@{user.position}"/>
+                    android:hint="@string/jabatan"/>
+
             </android.support.design.widget.TextInputLayout>
 
             <!--&lt;!&ndash; ID Induk&ndash;&gt;-->

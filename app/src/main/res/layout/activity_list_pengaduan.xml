@@ -11,6 +11,7 @@
             android:layout_height="match_parent">
 
             <android.support.v7.widget.RecyclerView
+                android:id="@+id/activity_list_pengaduan_recyclerView_pengaduanMasuk"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 

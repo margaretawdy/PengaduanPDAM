@@ -7,7 +7,7 @@
     >
 
     <android.support.v7.widget.CardView
-        android:id="@+id/activity_home_cardview_list_pengaduan"
+        android:id="@+id/activity_home_cardView_listPengaduan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="80dp"
@@ -39,7 +39,7 @@
                 android:background="#000"/>
 
             <TextView
-                android:id="@+id/txtDiameter"
+                android:id="@+id/activity_home_textView_label_listPengaduan"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:padding="1dp"
@@ -54,7 +54,7 @@
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
-        android:id="@+id/activity_home_cardview_grafik_record"
+        android:id="@+id/activity_home_cardView_grafikRecord"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -86,7 +86,7 @@
                 android:background="#000"/>
 
             <TextView
-                android:id="@+id/txtDiameter2"
+                android:id="@+id/activity_home_textView_label_grafikRecord"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:padding="1dp"
