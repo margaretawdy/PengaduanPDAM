@@ -29,7 +29,8 @@
         <activity android:name=".DetailPengaduan" />
         <activity android:name=".ListPengaduan" />
         <activity android:name=".InputPengaduan" />
-        <activity android:name=".GraphOverview"></activity>
+        <activity android:name=".GraphOverview" />
+        <activity android:name=".GraphDetail"></activity>
     </application>
 
 </manifest>
