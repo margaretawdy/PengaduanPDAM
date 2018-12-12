@@ -2,20 +2,21 @@ package com.pdamkotamadiun.aduin.activity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 
 import com.pdamkotamadiun.aduin.R;
+import com.pdamkotamadiun.aduin.activity.supervisor.HomeActivity;
 import com.pdamkotamadiun.aduin.model.token.Token;
 import com.pdamkotamadiun.aduin.service.LoginService;
-import com.pdamkotamadiun.aduin.activity.supervisor.HomeActivity;
 import com.pdamkotamadiun.aduin.utils.ServiceGeneratorUtils;
 
 import butterknife.BindView;
@@ -29,8 +30,9 @@ public class LoginActivity extends AppCompatActivity {
     public static final String TAG = "LoginActivity";
     public static final int REQUEST_LOGIN = 0;
 
-    ProgressDialog progressDialog;
-    LoginService loginService;
+    ProgressDialog mProgressDialog;
+    LoginService mLoginService;
+    SharedPreferences mSharedPreferences;
 
     @BindView(R.id.activity_login_linearLayout)
     LinearLayout linearLayout;
@@ -73,13 +75,26 @@ public class LoginActivity extends AppCompatActivity {
 
         initProgressDialog();
 
-        loginService = ServiceGeneratorUtils.createService(LoginService.class);
-        Call<Token> call = loginService.getToken(username, password);
+        mLoginService = ServiceGeneratorUtils.createService(LoginService.class);
+        Call<Token> call = mLoginService.getToken(username, password);
         call.enqueue(new Callback<Token>() {
             @Override
             public void onResponse(@NonNull Call<Token> call, @NonNull Response<Token> response) {
                 Log.d(TAG, "onResponse: " + response.body());
-                onLoginSuccess();
+                if (response.body() != null) {
+                    if (response.body().isError()) {
+                        onLoginFailed();
+                    } else {
+                        String token = response.body().getData().getToken();
+
+                        mSharedPreferences = getApplicationContext().getSharedPreferences("token", 0);
+                        SharedPreferences.Editor editor = mSharedPreferences.edit();
+                        editor.putString("token", token);
+                        editor.apply();
+
+                        onLoginSuccess();
+                    }
+                }
             }
 
             @Override
@@ -90,14 +105,15 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void initProgressDialog() {
-        progressDialog = new ProgressDialog(LoginActivity.this, R.style.AppTheme_Dark_Dialog);
-        progressDialog.setIndeterminate(true);
-        progressDialog.setMessage("Sabar ya, login nih...");
-        progressDialog.show();
+        mProgressDialog = new ProgressDialog(LoginActivity.this, R.style.AppTheme_Dark_Dialog);
+        mProgressDialog.setIndeterminate(true);
+        mProgressDialog.setCancelable(false);
+        mProgressDialog.setMessage("Sabar ya, login nih...");
+        mProgressDialog.show();
     }
 
     public void onLoginSuccess() {
-        progressDialog.dismiss();
+        mProgressDialog.dismiss();
         Intent intentToHomeActivityFromMainActivity = new Intent(this, HomeActivity.class);
         startActivity(intentToHomeActivityFromMainActivity);
         finish();
@@ -105,7 +121,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void onLoginFailed() {
-        progressDialog.dismiss();
+        mProgressDialog.dismiss();
 
         Snackbar snackbar = Snackbar.make(linearLayout, "Sayang nih, login gagal...", Snackbar.LENGTH_LONG);
         snackbar.setAction("OK", v -> snackbar.dismiss());
