@@ -33,7 +33,9 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="MissingConstraints"
-                    tools:text="Presentase Keluhan yang Masuk" />
+                    tools:text="Presentase Keluhan yang Masuk"
+                    android:text="Presentase Keluhan yang Masuk"
+                    />
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/activity_graph_overview_cardView_keluhanMasuk"
@@ -80,7 +82,9 @@
                             android:padding="1dp"
                             android:textAlignment="center"
                             android:textColor="@color/black"
-                            tools:text="Grafik 1 Soon To Be" />
+                            tools:text="Grafik 1 Soon To Be"
+                            android:text="Grafik 1 Soon To Be"
+                            />
 
                     </LinearLayout>
 
@@ -92,16 +96,18 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="16dp"
-                    app:layout_constraintBottom_toTopOf="@+id/activity_graph_overview_spinner_value_jenisKeluhan"
+                    app:layout_constraintBottom_toTopOf="@+id/activity_graph_overview_spinner_value_jenisPengaduan"
                     app:layout_constraintEnd_toEndOf="@+id/activity_graph_overview_cardView_keluhanMasuk"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="@+id/activity_graph_overview_cardView_keluhanMasuk"
                     app:layout_constraintTop_toBottomOf="@+id/activity_graph_overview_cardView_keluhanMasuk"
                     tools:ignore="MissingConstraints"
-                    tools:text="Presentasi Pengaduan yang Masuk" />
+                    tools:text="Presentasi Pengaduan yang Masuk"
+                    android:text="Presentasi Pengaduan yang Masuk"
+                    />
 
                 <Spinner
-                    android:id="@+id/activity_graph_overview_spinner_value_jenisKeluhan"
+                    android:id="@+id/activity_graph_overview_spinner_value_jenisPengaduan"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
@@ -122,10 +128,10 @@
                     app:cardCornerRadius="5dp"
                     app:cardElevation="6dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/activity_graph_overview_spinner_value_jenisKeluhan"
+                    app:layout_constraintEnd_toEndOf="@+id/activity_graph_overview_spinner_value_jenisPengaduan"
                     app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="@+id/activity_graph_overview_spinner_value_jenisKeluhan"
-                    app:layout_constraintTop_toBottomOf="@+id/activity_graph_overview_spinner_value_jenisKeluhan"
+                    app:layout_constraintStart_toStartOf="@+id/activity_graph_overview_spinner_value_jenisPengaduan"
+                    app:layout_constraintTop_toBottomOf="@+id/activity_graph_overview_spinner_value_jenisPengaduan"
                     app:layout_constraintVertical_bias="0.0">
 
                     <LinearLayout
@@ -155,7 +161,9 @@
                             android:padding="1dp"
                             android:textAlignment="center"
                             android:textColor="@color/black"
-                            tools:text="Grafik 2 Soon To Be" />
+                            tools:text="Grafik 2 Soon To Be"
+                            android:text="Grafik 2 Soon To Be"
+                            />
 
                     </LinearLayout>
 
@@ -168,12 +176,11 @@
         <Button
             android:id="@+id/activity_graph_overview_button_overview"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_marginStart="2dp"
             android:background="@color/primary"
-            android:drawableTop="@drawable/ic_delete_white_24dp"
+            android:drawableTop="@drawable/ic_pie_chart_white_24dp"
             android:padding="16dp"
-            android:text="@string/button_overview"
             android:textColor="@color/white"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -183,15 +190,14 @@
         <Button
             android:id="@+id/activity_graph_overview_button_detail"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_marginStart="2dp"
             android:layout_marginEnd="2dp"
             android:background="@color/primary"
+            android:drawableTop="@drawable/ic_insert_chart_white_24dp"
             android:padding="16dp"
-            android:text="@string/button_detail"
             android:textColor="@color/white"
             android:textSize="12sp"
-            android:drawableTop="@drawable/ic_process_black_24dp"
             app:layout_constraintBottom_toBottomOf="@+id/activity_graph_overview_button_overview"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/activity_graph_overview_button_overview"

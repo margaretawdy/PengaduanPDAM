@@ -55,6 +55,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="8dp"
+                        android:text="CEK"
                         tools:text="CEK" />
                 </LinearLayout>
 
@@ -113,7 +114,7 @@
         <Button
             android:id="@+id/activity_input_pengaduan_button_hapus"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:background="@color/primary"
             android:drawableTop="@drawable/ic_delete_white_24dp"
             android:padding="16dp"
@@ -127,12 +128,11 @@
         <Button
             android:id="@+id/activity_input_pengaduan_button_proses"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_marginStart="2dp"
             android:background="@color/primary"
             android:drawableTop="@drawable/ic_process_black_24dp"
             android:padding="16dp"
-            android:text="@string/button_proses"
             android:textColor="@color/white"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="@+id/activity_input_pengaduan_button_hapus"

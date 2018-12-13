@@ -18,18 +18,22 @@
         <activity
             android:name=".activity.LoginActivity"
             android:theme="@style/AppTheme.Dark">
+        </activity>
+        <activity android:name=".activity.AccountActivity" />
+        <activity android:name=".activity.supervisor.HomeActivity" />
+        <activity android:name=".activity.supervisor.DetailPengaduanActivity" />
+
+        <activity android:name=".activity.supervisor.ListPengaduanActivity"/>
+
+        <activity android:name=".activity.admin.InputPengaduanActivity"/>
+
+        <activity android:name=".activity.supervisor.GraphOverviewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.AccountActivity" />
-        <activity android:name=".activity.supervisor.HomeActivity" />
-        <activity android:name=".activity.supervisor.DetailPengaduanActivity" />
-        <activity android:name=".activity.supervisor.ListPengaduanActivity" />
-        <activity android:name=".activity.admin.InputPengaduanActivity" />
-        <activity android:name=".activity.supervisor.GraphOverviewActivity" />
         <activity android:name=".activity.supervisor.GraphDetailActivity"></activity>
     </application>
 

@@ -70,7 +70,7 @@ public class ListPengaduanActivity extends AppCompatActivity implements SearchVi
             mAnimator.cancel();
         }
 
-        mAnimator = ObjectAnimator.ofFloat(mActivityListPengaduanBinding.editProgressBar, View.ALPHA, 0.0f);
+        mAnimator = ObjectAnimator.ofFloat(mActivityListPengaduanBinding.activityListPengaduanProgressBar, View.ALPHA, 0.0f);
         mAnimator.setInterpolator(new AccelerateDecelerateInterpolator());
         mAnimator.addListener(new AnimatorListenerAdapter() {
 

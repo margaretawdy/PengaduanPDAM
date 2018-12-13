@@ -1,5 +1,7 @@
 package com.pdamkotamadiun.aduin.service;
 
+import com.pdamkotamadiun.aduin.model.token.TokenResponse;
+
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
