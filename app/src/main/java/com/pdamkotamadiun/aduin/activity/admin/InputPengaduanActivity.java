@@ -1,9 +1,11 @@
-package com.pdamkotamadiun.aduin;
+package com.pdamkotamadiun.aduin.activity.admin;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class InputPengaduan extends AppCompatActivity {
+import com.pdamkotamadiun.aduin.R;
+
+public class InputPengaduanActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

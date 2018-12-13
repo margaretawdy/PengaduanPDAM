@@ -1,9 +1,11 @@
-package com.pdamkotamadiun.aduin;
+package com.pdamkotamadiun.aduin.activity.supervisor;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class GraphDetail extends AppCompatActivity {
+import com.pdamkotamadiun.aduin.R;
+
+public class GraphDetailActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

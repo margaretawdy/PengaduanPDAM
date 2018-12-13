@@ -1,4 +1,4 @@
-package com.pdamkotamadiun.aduin.model.user;
+package com.pdamkotamadiun.aduin.model.jeniskeluhan;
 
 import android.support.annotation.NonNull;
 
@@ -10,7 +10,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
-public class User implements Serializable
+public class JenisKeluhanResponse implements Serializable
 {
 
     @SerializedName("error")
@@ -21,8 +21,8 @@ public class User implements Serializable
     private String message;
     @SerializedName("data")
     @Expose
-    private List<Datum> data = null;
-    private final static long serialVersionUID = 6349906566438422976L;
+    private List<JenisKeluhan> data = null;
+    private final static long serialVersionUID = 1241283787822351056L;
 
     public boolean isError() {
         return error;
@@ -40,11 +40,11 @@ public class User implements Serializable
         this.message = message;
     }
 
-    public List<Datum> getData() {
+    public List<JenisKeluhan> getData() {
         return data;
     }
 
-    public void setData(List<Datum> data) {
+    public void setData(List<JenisKeluhan> data) {
         this.data = data;
     }
 
@@ -64,10 +64,10 @@ public class User implements Serializable
         if (other == this) {
             return true;
         }
-        if (!(other instanceof User)) {
+        if (!(other instanceof JenisKeluhanResponse)) {
             return false;
         }
-        User rhs = ((User) other);
+        JenisKeluhanResponse rhs = ((JenisKeluhanResponse) other);
         return new EqualsBuilder().append(message, rhs.message).append(error, rhs.error).append(data, rhs.data).isEquals();
     }
 

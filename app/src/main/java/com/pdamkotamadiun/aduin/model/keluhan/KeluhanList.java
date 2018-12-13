@@ -10,7 +10,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
-public class Data implements Serializable
+public class KeluhanList implements Serializable
 {
 
     @SerializedName("current_page")
@@ -18,7 +18,7 @@ public class Data implements Serializable
     private int currentPage;
     @SerializedName("data")
     @Expose
-    private List<Datum> data = null;
+    private List<Keluhan> data = null;
     @SerializedName("from")
     @Expose
     private int from;
@@ -53,11 +53,11 @@ public class Data implements Serializable
         this.currentPage = currentPage;
     }
 
-    public List<Datum> getData() {
+    public List<Keluhan> getData() {
         return data;
     }
 
-    public void setData(List<Datum> data) {
+    public void setData(List<Keluhan> data) {
         this.data = data;
     }
 
@@ -141,10 +141,10 @@ public class Data implements Serializable
         if (other == this) {
             return true;
         }
-        if (!(other instanceof Data)) {
+        if (!(other instanceof KeluhanList)) {
             return false;
         }
-        Data rhs = ((Data) other);
+        KeluhanList rhs = ((KeluhanList) other);
         return new EqualsBuilder().append(total, rhs.total).append(to, rhs.to).append(lastPage, rhs.lastPage).append(nextPageUrl, rhs.nextPageUrl).append(prevPageUrl, rhs.prevPageUrl).append(path, rhs.path).append(data, rhs.data).append(perPage, rhs.perPage).append(from, rhs.from).append(currentPage, rhs.currentPage).isEquals();
     }
 

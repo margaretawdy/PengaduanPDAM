@@ -26,11 +26,11 @@
         </activity>
         <activity android:name=".activity.AccountActivity" />
         <activity android:name=".activity.supervisor.HomeActivity" />
-        <activity android:name=".DetailPengaduan" />
-        <activity android:name=".ListPengaduan" />
-        <activity android:name=".InputPengaduan" />
-        <activity android:name=".GraphOverview" />
-        <activity android:name=".GraphDetail"></activity>
+        <activity android:name=".activity.supervisor.DetailPengaduanActivity" />
+        <activity android:name=".activity.supervisor.ListPengaduanActivity" />
+        <activity android:name=".activity.admin.InputPengaduanActivity" />
+        <activity android:name=".activity.supervisor.GraphOverviewActivity" />
+        <activity android:name=".activity.supervisor.GraphDetailActivity"></activity>
     </application>
 
 </manifest>

@@ -145,7 +145,7 @@
                         tools:text="Dummy Alamat" />
                 </LinearLayout>
 
-                <!--Textview Keluhan-->
+                <!--Textview KeluhanResponse-->
                 <LinearLayout
                     android:id="@+id/activity_detail_pengaduan_linearLayout_keluhan"
                     android:layout_width="match_parent"

@@ -3,62 +3,49 @@ package com.pdamkotamadiun.aduin.model.token;
 
 import android.support.annotation.NonNull;
 
+import java.io.Serializable;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
-import java.io.Serializable;
-
 public class Token implements Serializable
 {
 
-    @SerializedName("error")
+    @SerializedName("token")
     @Expose
-    private boolean error;
-    @SerializedName("message")
+    private String token;
+    @SerializedName("user")
     @Expose
-    private String message;
-    @SerializedName("data")
-    @Expose
-    private Data data;
-    private final static long serialVersionUID = 4458132047534755329L;
+    private User user;
+    private final static long serialVersionUID = 8037441679393483749L;
 
-    public boolean isError() {
-        return error;
+    public String getToken() {
+        return token;
     }
 
-    public void setError(boolean error) {
-        this.error = error;
+    public void setToken(String token) {
+        this.token = token;
     }
 
-    public String getMessage() {
-        return message;
+    public User getUser() {
+        return user;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
-    public Data getData() {
-        return data;
-    }
-
-    public void setData(Data data) {
-        this.data = data;
+    public void setUser(User user) {
+        this.user = user;
     }
 
     @NonNull
     @Override
     public String toString() {
-        return new ToStringBuilder(this).append("error", error).append("message", message).append("data", data).toString();
+        return new ToStringBuilder(this).append("token", token).append("user", user).toString();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder().append(message).append(error).append(data).toHashCode();
+        return new HashCodeBuilder().append(token).append(user).toHashCode();
     }
 
     @Override
@@ -70,7 +57,7 @@ public class Token implements Serializable
             return false;
         }
         Token rhs = ((Token) other);
-        return new EqualsBuilder().append(message, rhs.message).append(error, rhs.error).append(data, rhs.data).isEquals();
+        return new EqualsBuilder().append(token, rhs.token).append(user, rhs.user).isEquals();
     }
 
 }

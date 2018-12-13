@@ -3,7 +3,6 @@ package com.pdamkotamadiun.aduin.model.jeniskeluhan;
 import android.support.annotation.NonNull;
 
 import java.io.Serializable;
-import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import org.apache.commons.lang3.builder.EqualsBuilder;
@@ -13,50 +12,39 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 public class JenisKeluhan implements Serializable
 {
 
-    @SerializedName("error")
+    @SerializedName("id_keluhan")
     @Expose
-    private boolean error;
-    @SerializedName("message")
+    private int idKeluhan;
+    @SerializedName("nama_keluhan")
     @Expose
-    private String message;
-    @SerializedName("data")
-    @Expose
-    private List<Datum> data = null;
-    private final static long serialVersionUID = 1241283787822351056L;
+    private String namaKeluhan;
+    private final static long serialVersionUID = -1964176617397491689L;
 
-    public boolean isError() {
-        return error;
+    public int getIdKeluhan() {
+        return idKeluhan;
     }
 
-    public void setError(boolean error) {
-        this.error = error;
+    public void setIdKeluhan(int idKeluhan) {
+        this.idKeluhan = idKeluhan;
     }
 
-    public String getMessage() {
-        return message;
+    public String getNamaKeluhan() {
+        return namaKeluhan;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
-    public List<Datum> getData() {
-        return data;
-    }
-
-    public void setData(List<Datum> data) {
-        this.data = data;
+    public void setNamaKeluhan(String namaKeluhan) {
+        this.namaKeluhan = namaKeluhan;
     }
 
     @NonNull
     @Override
     public String toString() {
-        return new ToStringBuilder(this).append("error", error).append("message", message).append("data", data).toString();
+        return new ToStringBuilder(this).append("idKeluhan", idKeluhan).append("namaKeluhan", namaKeluhan).toString();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder().append(message).append(error).append(data).toHashCode();
+        return new HashCodeBuilder().append(idKeluhan).append(namaKeluhan).toHashCode();
     }
 
     @Override
@@ -68,7 +56,7 @@ public class JenisKeluhan implements Serializable
             return false;
         }
         JenisKeluhan rhs = ((JenisKeluhan) other);
-        return new EqualsBuilder().append(message, rhs.message).append(error, rhs.error).append(data, rhs.data).isEquals();
+        return new EqualsBuilder().append(idKeluhan, rhs.idKeluhan).append(namaKeluhan, rhs.namaKeluhan).isEquals();
     }
 
 }

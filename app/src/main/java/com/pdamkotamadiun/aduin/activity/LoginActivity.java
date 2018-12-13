@@ -2,7 +2,6 @@ package com.pdamkotamadiun.aduin.activity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -15,7 +14,6 @@ import android.widget.LinearLayout;
 
 import com.pdamkotamadiun.aduin.R;
 import com.pdamkotamadiun.aduin.activity.supervisor.HomeActivity;
-import com.pdamkotamadiun.aduin.model.token.Token;
 import com.pdamkotamadiun.aduin.service.LoginService;
 import com.pdamkotamadiun.aduin.utils.ServiceGeneratorUtils;
 
@@ -32,7 +30,6 @@ public class LoginActivity extends AppCompatActivity {
 
     ProgressDialog mProgressDialog;
     LoginService mLoginService;
-    SharedPreferences mSharedPreferences;
 
     @BindView(R.id.activity_login_linearLayout)
     LinearLayout linearLayout;
@@ -76,21 +73,22 @@ public class LoginActivity extends AppCompatActivity {
         initProgressDialog();
 
         mLoginService = ServiceGeneratorUtils.createService(LoginService.class);
-        Call<Token> call = mLoginService.getToken(username, password);
-        call.enqueue(new Callback<Token>() {
+        Call<TokenResponse> call = mLoginService.getToken(username, password);
+        call.enqueue(new Callback<TokenResponse>() {
             @Override
-            public void onResponse(@NonNull Call<Token> call, @NonNull Response<Token> response) {
+            public void onResponse(@NonNull Call<TokenResponse> call, @NonNull Response<TokenResponse> response) {
                 Log.d(TAG, "onResponse: " + response.body());
                 if (response.body() != null) {
                     if (response.body().isError()) {
                         onLoginFailed();
                     } else {
-                        String token = response.body().getData().getToken();
+                        String token = response.body().getToken().getToken();
 
-                        mSharedPreferences = getApplicationContext().getSharedPreferences("token", 0);
-                        SharedPreferences.Editor editor = mSharedPreferences.edit();
-                        editor.putString("token", token);
-                        editor.apply();
+                        getApplicationContext()
+                                .getSharedPreferences("token", 0)
+                                .edit()
+                                .putString("token", token)
+                                .apply();
 
                         onLoginSuccess();
                     }
@@ -98,7 +96,7 @@ public class LoginActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(@NonNull Call<Token> call, @NonNull Throwable t) {
+            public void onFailure(@NonNull Call<TokenResponse> call, @NonNull Throwable t) {
                 onLoginFailed();
             }
         });
