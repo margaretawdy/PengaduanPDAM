@@ -9,21 +9,23 @@ import com.github.wrdlbrnft.sortedlistadapter.SortedListAdapter;
 import com.pdamkotamadiun.aduin.R;
 import com.pdamkotamadiun.aduin.constant.Constant;
 import com.pdamkotamadiun.aduin.databinding.ItemListPengaduanBinding;
+import com.pdamkotamadiun.aduin.model.keluhan.Datum;
 import com.pdamkotamadiun.aduin.model.keluhan.Keluhan;
 
-public class ListPengaduanViewHolder extends SortedListAdapter.ViewHolder<Keluhan> {
+public class ListPengaduanViewHolder extends SortedListAdapter.ViewHolder<Datum> {
 
     private ItemListPengaduanBinding mItemListPengaduanBinding;
     private Context context;
 
-    public ListPengaduanViewHolder(Context context, ItemListPengaduanBinding mItemListPengaduanBinding) {
+    ListPengaduanViewHolder(Context context, ItemListPengaduanBinding mItemListPengaduanBinding) {
         super(mItemListPengaduanBinding.getRoot());
         this.mItemListPengaduanBinding = mItemListPengaduanBinding;
         this.context = context;
     }
 
+
     @Override
-    protected void performBind(@NonNull Keluhan item) {
+    protected void performBind(@NonNull Datum item) {
         if (getLayoutPosition() %2 == 1) {
             mItemListPengaduanBinding.activityItemListPengaduanCardView.setBackgroundColor(ContextCompat.getColor(context, R.color.light_white));
         } else {

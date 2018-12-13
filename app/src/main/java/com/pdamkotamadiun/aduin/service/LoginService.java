@@ -1,6 +1,6 @@
 package com.pdamkotamadiun.aduin.service;
 
-import com.pdamkotamadiun.aduin.model.token.TokenResponse;
+import com.pdamkotamadiun.aduin.model.token.Token;
 
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -10,5 +10,5 @@ import retrofit2.http.POST;
 public interface LoginService {
     @FormUrlEncoded
     @POST("login")
-    Call<TokenResponse> getToken(@Field("username") String username, @Field("password") String password);
+    Call<Token> login(@Field("username") String username, @Field("password") String password);
 }

@@ -14,7 +14,7 @@ import android.widget.LinearLayout;
 
 import com.pdamkotamadiun.aduin.R;
 import com.pdamkotamadiun.aduin.activity.supervisor.HomeActivity;
-import com.pdamkotamadiun.aduin.model.token.TokenResponse;
+import com.pdamkotamadiun.aduin.model.token.Token;
 import com.pdamkotamadiun.aduin.service.LoginService;
 import com.pdamkotamadiun.aduin.utils.ServiceGeneratorUtils;
 
@@ -30,7 +30,6 @@ public class LoginActivity extends AppCompatActivity {
     public static final int REQUEST_LOGIN = 0;
 
     ProgressDialog mProgressDialog;
-    LoginService mLoginService;
 
     @BindView(R.id.activity_login_linearLayout)
     LinearLayout linearLayout;
@@ -49,6 +48,9 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
+
+        etUsername.setText("litbang");
+        etPassword.setText("litbang");
 
         btLogin.setOnClickListener(v -> onLogin());
     }
@@ -73,34 +75,34 @@ public class LoginActivity extends AppCompatActivity {
 
         initProgressDialog();
 
-        mLoginService = ServiceGeneratorUtils.createService(LoginService.class);
-        Call<TokenResponse> call = mLoginService.getToken(username, password);
-        call.enqueue(new Callback<TokenResponse>() {
-            @Override
-            public void onResponse(@NonNull Call<TokenResponse> call, @NonNull Response<TokenResponse> response) {
-                Log.d(TAG, "onResponse: " + response.body());
-                if (response.body() != null) {
-                    if (response.body().isError()) {
-                        onLoginFailed();
-                    } else {
-                        String token = response.body().getToken().getToken();
+        ServiceGeneratorUtils
+                .createService(LoginService.class)
+                .login(username, password)
+                .enqueue(new Callback<Token>() {
+                    @Override
+                    public void onResponse(@NonNull Call<Token> call, @NonNull Response<Token> response) {
+                        Token token = response.body();
+                        if (token != null) {
+                            Log.d(TAG, "onResponse: " + token);
+                            if (token.isError()) {
+                                onLoginFailed();
+                            } else {
+                                getApplicationContext()
+                                        .getSharedPreferences("token", 0)
+                                        .edit()
+                                        .putString("token", token.getData().getToken())
+                                        .apply();
 
-                        getApplicationContext()
-                                .getSharedPreferences("token", 0)
-                                .edit()
-                                .putString("token", token)
-                                .apply();
-
-                        onLoginSuccess();
+                                onLoginSuccess();
+                            }
+                        }
                     }
-                }
-            }
 
-            @Override
-            public void onFailure(@NonNull Call<TokenResponse> call, @NonNull Throwable t) {
-                onLoginFailed();
-            }
-        });
+                    @Override
+                    public void onFailure(@NonNull Call<Token> call, @NonNull Throwable t) {
+                        onLoginFailed();
+                    }
+                });
     }
 
     public void initProgressDialog() {
@@ -113,8 +115,8 @@ public class LoginActivity extends AppCompatActivity {
 
     public void onLoginSuccess() {
         mProgressDialog.dismiss();
-        Intent intentToHomeActivityFromMainActivity = new Intent(this, HomeActivity.class);
-        startActivity(intentToHomeActivityFromMainActivity);
+        Intent intentToHomeFromLogin = new Intent(this, HomeActivity.class);
+        startActivity(intentToHomeFromLogin);
         finish();
         overridePendingTransition(R.anim.push_left_in, R.anim.push_left_out);
     }

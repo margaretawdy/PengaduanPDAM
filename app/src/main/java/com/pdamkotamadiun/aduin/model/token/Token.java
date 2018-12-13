@@ -1,4 +1,3 @@
-
 package com.pdamkotamadiun.aduin.model.token;
 
 import android.support.annotation.NonNull;
@@ -13,39 +12,50 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 public class Token implements Serializable
 {
 
-    @SerializedName("token")
+    @SerializedName("error")
     @Expose
-    private String token;
-    @SerializedName("user")
+    private boolean error;
+    @SerializedName("message")
     @Expose
-    private User user;
-    private final static long serialVersionUID = 8037441679393483749L;
+    private String message;
+    @SerializedName("data")
+    @Expose
+    private Data data;
+    private final static long serialVersionUID = 4458132047534755329L;
 
-    public String getToken() {
-        return token;
+    public boolean isError() {
+        return error;
     }
 
-    public void setToken(String token) {
-        this.token = token;
+    public void setError(boolean error) {
+        this.error = error;
     }
 
-    public User getUser() {
-        return user;
+    public String getMessage() {
+        return message;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public Data getData() {
+        return data;
+    }
+
+    public void setData(Data data) {
+        this.data = data;
     }
 
     @NonNull
     @Override
     public String toString() {
-        return new ToStringBuilder(this).append("token", token).append("user", user).toString();
+        return new ToStringBuilder(this).append("error", error).append("message", message).append("data", data).toString();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder().append(token).append(user).toHashCode();
+        return new HashCodeBuilder().append(message).append(error).append(data).toHashCode();
     }
 
     @Override
@@ -57,7 +67,7 @@ public class Token implements Serializable
             return false;
         }
         Token rhs = ((Token) other);
-        return new EqualsBuilder().append(token, rhs.token).append(user, rhs.user).isEquals();
+        return new EqualsBuilder().append(message, rhs.message).append(error, rhs.error).append(data, rhs.data).isEquals();
     }
 
 }
