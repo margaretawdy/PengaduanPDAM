@@ -140,6 +140,7 @@ public class ListPengaduanActivity extends AppCompatActivity implements SearchVi
     }
 
     private void onLoadKeluhanSuccess() {
+        mListPengaduanAdapter.edit().replaceAll(mKeluhan.getData().getData());
     }
 
     private void onLoadKeluhanFailed() {
